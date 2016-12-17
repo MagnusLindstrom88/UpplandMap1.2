@@ -1,0 +1,18 @@
+{
+    "contents" : "require(shiny)\nrequire(leaflet)\nrequire(magrittr)\nrequire(sp)\nrequire(shinyjs)\nlibrary(shinyjs)\nlibrary(V8)\n\n\n\nshinyUI(\n  \n  navbarPage(\"Xplor\", id=\"nav\",\n                             \n  tabPanel(\"Interaktiv karta\",\n           \n    div(class = \"outer\",\n     tags$head(\n          includeCSS(\"style.css\")\n     ),\n        \n      \n      leafletOutput(\"map\", width = \"100%\", height = \"100%\"),\n \n      absolutePanel(id = \"controls\", class = \"panel panel-default\", fixed = TRUE,\n                  draggable = TRUE, top = 60, left = \"auto\", right = 20, bottom = \"auto\",\n                  width = 300, height = \"auto\",\n      \n                  selectInput(\"var\", \n                              label = h4(\"Välj ett ämne\"),\n                              choices = c(\"Parker & grönområden\", \"Mångfald i bostadsutbudet\",\n                                          \"Levandegöra gemensamma platser\", \"Kommunikationer\",\n                                          \"Kultur & fritid\",\"Utbildning\",\"Omsorg\",\"Skolan\",\n                                          \"Trygghet\",\"Hållbar utveckling\")\n                  ),\n                  \n                    shinyjs::useShinyjs(),\n                    actionButton(\"könButton\",label = \"Kön\"),\n                    hidden(\n                    checkboxGroupInput(\"Check1\",label=h4 (\"\"), choices = levels(data3$Kön))),\n                    br(),\n                    actionButton(\"utbildningButton\",label = \"Utbildningsnivå\"),\n                    hidden(\n                    checkboxGroupInput(\"Check2\",label=h4 (\"\"), choices = levels(data3$Utbildningsnivå))),\n                    br(),\n                    actionButton(\"sysselsättningButton\",label = \"Sysselsättning\"),\n                    hidden(  \n                    checkboxGroupInput(\"Check3\",label=h4 (\"\"), choices = levels(data3$Sysselsättning))),\n                    br(),\n                    actionButton(\"tidIUppväsButton\",label = \"Tid I Uppväs\"),\n                    hidden(\n                    checkboxGroupInput(\"Check4\",label=h4 (\"\"), choices = levels(data3$Tid.i.UppVäs))),\n                    br(),\n                    actionButton(\"ålderButton\",label = \"Ålder\"),\n                    hidden(\n                    checkboxGroupInput(\"Check5\",label=h4 (\"\"), choices = levels(data3$Ålder))),\n                  \n                  selectInput(\"var2\", \n                              label = h4(\"Välj ett ämne\"),\n                              choices = c(\"Välj ett alternativ\", \"Vatten eller bostäder\",\n                                          \"Service eller grönområden\", \"Centralort eller mindre tätort\")\n                                        )\n                  )\n\n\n    )\n    )            \n    )\n        \n)\n",
+    "created" : 1480766012189.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "955516215",
+    "id" : "C1DDC95F",
+    "lastKnownWriteTime" : 1465918453,
+    "path" : "C:/Users/Magnus/Desktop/UpplandMap lokaltest/UM/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

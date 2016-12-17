@@ -1,0 +1,36 @@
+
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+.leaflet {
+  height: 100%; 
+  width: 100%;
+}
+.outer {
+  position: fixed;
+  top: 41px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  padding: 0;
+}
+button {
+  width: 100%;
+}
+#controls {
+  /* Appearance */
+  background-color: white;
+  padding: 0 10px 10px 10px;
+  opacity: 0.90;
+  zoom: 0.9;
+
+}
+h1, h2, h3, h4 { 
+  font-weight: 400;
+
+}
+

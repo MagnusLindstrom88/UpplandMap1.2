@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1451925051447.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "5EE218E1",
+    "lastKnownWriteTime" : 7011605692497750387,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "s3j9axmkth",
+        "caption" : "cleanRound",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=cleanRound&cache_key=s3j9axmkth",
+        "displayedObservations" : "43",
+        "environment" : "",
+        "object" : "cleanRound",
+        "totalObservations" : "43",
+        "variables" : "65"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

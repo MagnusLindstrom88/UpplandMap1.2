@@ -1,0 +1,17 @@
+{
+    "contents" : "library(shiny)\nlibrary(leaflet)\nlibrary(magrittr)\nlibrary(sp)\nlibrary(htmltools)\nlibrary(RColorBrewer)\n\nsource(\"helper.R\")\n\n\n\nshinyServer(function(input, output, session) {\n  \n\n  \n  output$map <- renderLeaflet({\n    leaflet() %>%\n      addTiles()%>%\n      addPolygons(data=uv84, weight = 2, fillOpacity = 0.5, smoothFactor = 0.5,\n                  popup = htmlEscape(uv84$NAMN))%>%\n       addProviderTiles(\"CartoDB.Positron\")\n     \n  })\n  \n\n  område_popup<-reactive({\n    \n    områden<-karta(input$var)\n    z<-popup(input$var)\n   \n    \n    område_popup <-paste( \"<Strong>Område: </strong>\",\n                          områden[,1],\n                          \"<br><Strong>\",z[1,],\":</strong>\",\n                          områden[,2],\n                          \"<br><strong>\",z[2,],\":</strong>\",\n                          områden[,3],\n                          \"<br><strong>\",z[3,],\":</strong>\",\n                          områden[,4],\n                          \"<br><strong>\",z[4,],\":</strong>\",\n                          områden[,5],\n                          \"<br><strong>\",z[5,],\":</strong>\",\n                          områden[,6])\n  })\n  \n  observe({\n    pop_up<-område_popup()\n    z<-popup(input$var)\n    områden<-karta(input$var)\n    factpal <- colorFactor(topo.colors(5), områden$favorit)\n    leafletProxy(\"map\")%>%\n      clearShapes()%>%\n      clearControls()%>%\n      addPolygons(data=uv84, weight = 2, fillOpacity = 0.5, smoothFactor = 0.5,\n                  popup = pop_up, color = ~factpal(områden$favorit))%>%\n    addLegend(\"bottomleft\", pal = factpal, values = z[,1]\n             \n    )\n    \n  })\n  \n})\n",
+    "created" : 1449669378438.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2793074510",
+    "id" : "60C2804B",
+    "lastKnownWriteTime" : 1452081549,
+    "path" : "C:/Users/Martin/UpplandMap/UM/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

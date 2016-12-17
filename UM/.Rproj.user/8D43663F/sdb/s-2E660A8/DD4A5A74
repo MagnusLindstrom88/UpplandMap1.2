@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1481974853705.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "DD4A5A74",
+    "lastKnownWriteTime" : 7011605692497750387,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "bm5jstrvhm",
+        "caption" : "data6",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=data6&cache_key=bm5jstrvhm",
+        "displayedObservations" : 43,
+        "environment" : "",
+        "object" : "data6",
+        "totalObservations" : 43,
+        "variables" : 69
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

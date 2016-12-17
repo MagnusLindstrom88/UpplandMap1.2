@@ -1,0 +1,17 @@
+{
+    "contents" : "round_df <- function(x, digits) {\n  # round all numeric variables\n  # x: data frame \n  # digits: number of digits to round\n  numeric_columns <- sapply(x, class) == 'numeric'\n  x[numeric_columns] <-  round(x[numeric_columns], digits)\n  x\n}\n\nkarta<- function(x){\n  \n  y<-switch(x,\n            \"Parker & grönområden\" = c(\"Area\",\"X1a\",\"X1b\",\"X1c\",\"X1d\",\"X1e\"),\n            \"Mångfald i bostadsutbudet\" =c(\"Area\",\"X2a\",\"X2b\",\"X2c\",\"X2d\",\"X2e\"),\n            \"Levandegöra gemensamma platser\" =c(\"Area\",\"X3a\",\"X3b\",\"X3c\",\"X3d\",\"X3e\"),\n            \"Kommunikationer\" = c(\"Area\",\"X4a\",\"X4b\",\"X4c\",\"X4d\",\"X4e\"),\n            \"Kultur & fritid\" = c(\"Area\",\"X5a\",\"X5b\",\"X5c\",\"X5d\",\"X5e\"),\n            \"Utbildning\" = c(\"Area\",\"X6a\",\"X6b\",\"X6c\",\"X6d\",\"X6e\"),\n            \"Omsorg\" = c(\"Area\",\"X7a\",\"X7b\",\"X7c\",\"X7d\",\"X7e\"),\n            \"Skolan\" = c(\"Area\",\"X8a\",\"X8b\",\"X8c\",\"X8d\",\"X8e\"),\n            \"Trygghet\" = c(\"Area\",\"X9a\",\"X9b\",\"X9c\",\"X9d\",\"X9e\"),\n            \"Hållbar utveckling\" = c(\"Area\",\"X10a\",\"X10b\",\"X10c\",\"X10d\",\"X10e\")\n  )\n  \n  \n  y<-subset(cleanRound,select=y)\n  y$favorit = names(y)[-1][apply(y[-1],1,which.max)]\n  y\n}\n\npopup<-function(x){\n  \n  z<-switch(x,\n            \"Parker & grönområden\" = c(\"F1\"),\n            \"Mångfald i bostadsutbudet\" =c(\"F2\"),\n            \"Levandegöra gemensamma platser\" =c(\"F3\"),\n            \"Kommunikationer\" = c(\"F4\"),\n            \"Kultur & fritid\" = c(\"F5\"),\n            \"Utbildning\" = c(\"F6\"),\n            \"Omsorg\" = c(\"F7\"),\n            \"Skolan\" = c(\"F8\"),\n            \"Trygghet\" = c(\"F9\"),\n            \"Hållbar utveckling\" = c(\"F10\")\n  )\n  \n  \n  z<-subset(fragor,select=z)\n  \n  \n  return(z)        \n  \n}\n",
+    "created" : 1451924375298.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3794649608",
+    "id" : "B8783FC2",
+    "lastKnownWriteTime" : 1452022462,
+    "path" : "C:/Users/Martin/UpplandMap/UM/helper.R",
+    "project_path" : "helper.R",
+    "properties" : {
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

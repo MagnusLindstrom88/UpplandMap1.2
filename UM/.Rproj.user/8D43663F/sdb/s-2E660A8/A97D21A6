@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1481974100239.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "A97D21A6",
+    "lastKnownWriteTime" : 7011605692497750387,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "bm5jstrvhm",
+        "caption" : "data3",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=data3&cache_key=bm5jstrvhm",
+        "displayedObservations" : 1034,
+        "environment" : "",
+        "object" : "data3",
+        "totalObservations" : 1034,
+        "variables" : 70
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

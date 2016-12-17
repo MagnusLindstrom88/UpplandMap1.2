@@ -1,0 +1,17 @@
+{
+    "contents" : "library(shiny)\nlibrary(leaflet)\nlibrary(magrittr)\nlibrary(sp)\n\n\nshinyUI(\n  \n  navbarPage(\"Xplor\", id=\"nav\",\n                             \n  tabPanel(\"Interaktiv karta\",\n           \n    div(class = \"outer\",\n     tags$head(\n          includeCSS(\"style.css\")\n     ),\n        \n      \n      leafletOutput(\"map\", width = \"100%\", height = \"100%\"),\n \n      absolutePanel(id = \"controls\", class = \"panel panel-default\", fixed = TRUE,\n                  draggable = TRUE, top = 60, left = \"auto\", right = 20, bottom = \"auto\",\n                  width = 300, height = \"auto\",\n      \n                  selectInput(\"var\", \n                              label = h4(\"Choose a variable to display\"),\n                              choices = c(\"Parker & grönområden\", \"Mångfald i bostadsutbudet\",\n                                          \"Levandegöra gemensamma platser\", \"Kommunikationer\",\n                                          \"Kultur & fritid\",\"Utbildning\",\"Omsorg\",\"Skolan\",\n                                          \"Trygghet\",\"Hållbar utveckling\")\n                  )\n    )\n    )            \n    )\n         \n# mainPanel(leafletOutput(\"map\"), textOutput(\"dynamicText\"),\n#           \n#           selectInput(\"radioB\", \"Färg\",\n#                        choices = c(\"Greens\", \"Reds\", \"Blues\"))\n# \n#           \n# \n# ))\n)\n)",
+    "created" : 1451928275419.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3910650830",
+    "id" : "A1550075",
+    "lastKnownWriteTime" : 1452079699,
+    "path" : "C:/Users/Martin/UpplandMap/UM/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
